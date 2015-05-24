@@ -4,6 +4,7 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:jpa="http://www.springframework.org/schema/data/jpa"
        xsi:schemaLocation="
@@ -13,6 +14,8 @@
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-2.5.xsd
            http://www.springframework.org/schema/aop
            http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
            http://www.springframework.org/schema/tx
@@ -28,6 +31,35 @@
     <mvc:annotation-driven/>
 
     <import resource="config/web-application-context.xml" />
+
+    <!-- Configuring interceptors based on URI -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="edu.usc.lunchnlearn.springmvc.interceptor.BreadCrumbInterceptor">
+                <property name="uriExclusionList">
+                    <util:list value-type="java.lang.String">
+                        <value>db/game/delete</value>
+                    </util:list>
+                </property>
+                <property name="uriDisplayTextMapping">
+                    <map>
+                        <!-- The key is from the RequestMapping on the controllers -->
+                        <entry key="index" value="Home"/>
+                        <entry key="db/genre" value="Genre DAO"/>
+                        <entry key="db/platform" value="Platform DAO"/>
+                        <entry key="db/studio" value="Studio DAO"/>
+                        <entry key="db/game" value="Game DAO"/>
+                        <entry key="gameinfo" value="Game Info"/>
+                        <entry key="search" value="Search"/>
+                    </map>
+                </property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
+
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>

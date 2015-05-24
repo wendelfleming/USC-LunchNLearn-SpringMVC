@@ -3,6 +3,9 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<%@ taglib prefix="usc" uri="/WEB-INF/usc-middleware-functions.tld" %>
+
 <html>
 <head>
   <title></title>
@@ -16,11 +19,19 @@
     <%--//-->--%>
   <%--</script>--%>
 
+  <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+  <c:set var="jsPath" value="${contextPath}/js/jbreadcrumb/"/>
+  <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
+  ${usc:breadcrumbhead(jsPath,cssPath)}
+
 
 </head>
 <body>
 
 <h1>Game</h1>
+
+${usc:breadcrumbbody(x, bCrumbs)}
+
 
   <form:form commandName="newGame" method="POST">
     Name: <form:input path="name"/><br />
@@ -51,7 +62,7 @@
           <td>${game.platform}</td>
           <td>${game.studio}</td>
           <td>
-            <form method="post" action="<%=request.getContextPath()%>/spring/db/game/delete"><input type="hidden" name="gameId" value="${game.id}"/><input type="submit" value="Delete"/></form>
+            <form method="post" action="<%=request.getContextPath()%>/spring/db/game/delete?x=${x}"><input type="hidden" name="gameId" value="${game.id}"/><input type="submit" value="Delete"/></form>
           </td>
         </tr>
       </c:forEach>

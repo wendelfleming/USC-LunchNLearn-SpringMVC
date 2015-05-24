@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'war'
+apply plugin: 'idea'
 apply plugin: 'jetty'
 
 sourceCompatibility = 1.8
@@ -19,6 +20,7 @@ ext {
     hibernateJPAVersion = "1.0.0.Final"
     hsqldbVersion = "2.2.9"
     jacksonVersion = "2.5.1"
+    commonsLangVersion = "3.3.2"
 }
 
 repositories {
@@ -62,6 +64,10 @@ dependencies {
     compile "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
     compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
     compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
+
+    // Commons Lang
+    compile "org.apache.commons:commons-lang3:$commonsLangVersion"
+
 
     // Unit Testing
     testCompile "org.hamcrest:hamcrest-all:$hamcrestVersion"
