@@ -8,6 +8,7 @@ import java.util.List;
 public interface TableService<T, ID> {
 
     List<T> findAll();
+    List<T> findAllByName();
     T findOne(ID id);
     void delete(T entity);
     void save(T entity);

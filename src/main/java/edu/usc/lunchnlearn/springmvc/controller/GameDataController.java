@@ -46,23 +46,19 @@ public class GameDataController {
     public String gameList(ModelMap modelMap) {
         Game game = new Game();
         modelMap.put("newGame", game);
-        modelMap.put("genres", genreService.findAll());
-        modelMap.put("platforms", platformService.findAll());
-        modelMap.put("studios", studioService.findAll());
-        modelMap.put("games", gameService.findAll());
+        loadModel(modelMap);
+        modelMap.put("games", gameService.findAllByName());
         return "gamedata";
     }
 
     @RequestMapping(value="/db/game/", method = RequestMethod.POST)
     public String newGame(@ModelAttribute("newGame") Game game,  ModelMap modelMap) {
-        modelMap.put("genres", genreService.findAll());
-        modelMap.put("platforms", platformService.findAll());
-        modelMap.put("studios", studioService.findAll());
+        loadModel(modelMap);
 
         gameService.save(game);
         modelMap.put("newGame", new Game());
 
-        modelMap.put("games", gameService.findAll());
+        modelMap.put("games", gameService.findAllByName());
 
         return "gamedata";
     }
@@ -70,9 +66,7 @@ public class GameDataController {
 
     @RequestMapping(value="/db/game/delete", method = RequestMethod.POST)
     public String deleteGame(Long gameId,  ModelMap modelMap) {
-        modelMap.put("genres", genreService.findAll());
-        modelMap.put("platforms", platformService.findAll());
-        modelMap.put("studios", studioService.findAll());
+        loadModel(modelMap);
 
         gameService.delete(gameService.findOne(gameId));
 
@@ -84,6 +78,11 @@ public class GameDataController {
     }
 
 
+    private void loadModel(ModelMap modelMap) {
+        modelMap.put("genres", genreService.findAllByName());
+        modelMap.put("platforms", platformService.findAllByName());
+        modelMap.put("studios", studioService.findAllByName());
+    }
 
 
     @InitBinder

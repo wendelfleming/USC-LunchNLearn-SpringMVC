@@ -4,6 +4,7 @@ import edu.usc.lunchnlearn.springmvc.dao.GenreRepository;
 import edu.usc.lunchnlearn.springmvc.dao.bean.Genre;
 import edu.usc.lunchnlearn.springmvc.service.GenreService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -18,6 +19,11 @@ public class GenreServiceImpl implements GenreService {
     @Override
     public List<Genre> findAll() {
         return genreRepository.findAll();
+    }
+
+    @Override
+    public List<Genre> findAllByName() {
+        return genreRepository.findAll(new Sort(Sort.Direction.ASC, "name"));
     }
 
     @Override

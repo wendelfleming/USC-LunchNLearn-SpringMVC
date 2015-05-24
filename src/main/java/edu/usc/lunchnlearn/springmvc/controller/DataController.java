@@ -31,15 +31,15 @@ public class DataController {
         modelMap.addAttribute("pathName", tableName);
         switch (tableName) {
             case("genre"):
-                modelMap.addAttribute("dataset", genreService.findAll());
+                modelMap.addAttribute("dataset", genreService.findAllByName());
                 modelMap.addAttribute("pageName", "Genre");
                 return "data";
             case("platform"):
-                modelMap.addAttribute("dataset", platformService.findAll());
+                modelMap.addAttribute("dataset", platformService.findAllByName());
                 modelMap.addAttribute("pageName", "Platform");
                 return "data";
             default:
-                modelMap.addAttribute("dataset", studioService.findAll());
+                modelMap.addAttribute("dataset", studioService.findAllByName());
                 modelMap.addAttribute("pageName", "Studio");
                 return "data";
         }

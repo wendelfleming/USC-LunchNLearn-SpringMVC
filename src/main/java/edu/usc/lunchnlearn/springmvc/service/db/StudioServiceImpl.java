@@ -4,6 +4,7 @@ import edu.usc.lunchnlearn.springmvc.dao.StudioRepository;
 import edu.usc.lunchnlearn.springmvc.dao.bean.Studio;
 import edu.usc.lunchnlearn.springmvc.service.StudioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -18,6 +19,11 @@ public class StudioServiceImpl implements StudioService {
     @Override
     public List<Studio> findAll() {
         return studioRepository.findAll();
+    }
+
+    @Override
+    public List<Studio> findAllByName() {
+        return studioRepository.findAll(new Sort(Sort.Direction.ASC, "name"));
     }
 
     @Override

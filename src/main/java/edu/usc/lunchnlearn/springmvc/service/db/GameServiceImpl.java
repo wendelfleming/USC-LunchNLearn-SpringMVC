@@ -4,6 +4,7 @@ import edu.usc.lunchnlearn.springmvc.dao.GameRepository;
 import edu.usc.lunchnlearn.springmvc.dao.bean.Game;
 import edu.usc.lunchnlearn.springmvc.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -19,6 +20,11 @@ public class GameServiceImpl implements GameService {
     @Override
     public List<Game> findAll() {
         return gameRepository.findAll();
+    }
+
+    @Override
+    public List<Game> findAllByName() {
+        return gameRepository.findAll(new Sort(Sort.Direction.ASC, "name"));
     }
 
     @Override

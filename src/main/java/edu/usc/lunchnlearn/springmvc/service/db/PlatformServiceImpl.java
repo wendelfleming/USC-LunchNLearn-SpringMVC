@@ -4,6 +4,7 @@ import edu.usc.lunchnlearn.springmvc.dao.PlatformRepository;
 import edu.usc.lunchnlearn.springmvc.dao.bean.Platform;
 import edu.usc.lunchnlearn.springmvc.service.PlatformService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -18,6 +19,11 @@ public class PlatformServiceImpl implements PlatformService {
     @Override
     public List<Platform> findAll() {
         return platformRepository.findAll();
+    }
+
+    @Override
+    public List<Platform> findAllByName() {
+        return platformRepository.findAll(new Sort(Sort.Direction.ASC, "name"));
     }
 
     @Override

@@ -34,9 +34,9 @@ public class DataAdminController {
     @RequestMapping(value = "/db/{tablename:genre|platform|studio}/admin/list", method = RequestMethod.GET, headers="Accept=application/json")
     public List listData(@PathVariable("tablename")String tableName) {
         switch (tableName) {
-            case ("genre"): return genreService.findAll();
-            case ("platform"): return platformService.findAll();
-            default: return studioService.findAll();
+            case ("genre"): return genreService.findAllByName();
+            case ("platform"): return platformService.findAllByName();
+            default: return studioService.findAllByName();
         }
     }
 

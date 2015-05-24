@@ -11,4 +11,7 @@ import java.util.List;
  */
 
 public interface StudioRepository extends JpaRepository<Studio, Long> {
+
+//    List<Studio> findAllByOrderByNameAsc();
+
 }

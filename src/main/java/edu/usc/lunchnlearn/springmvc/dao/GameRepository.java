@@ -17,4 +17,7 @@ public interface GameRepository extends JpaRepository<Game, Long> {
     List<Game> findByPlatform_Name(String platformName);
 
     List<Game> findByNameContainingOrGenre_NameContainingOrStudio_NameContainingOrPlatform_NameContaining(String name, String genreName, String studioName, String platformName);
+
+//    List<Game> findAllOrderByNameOrderByNameAsc();
+
 }
