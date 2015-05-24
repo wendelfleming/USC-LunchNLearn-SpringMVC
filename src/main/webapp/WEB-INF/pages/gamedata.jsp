@@ -23,6 +23,7 @@
 
 ${usc:breadcrumbbody(x, bCrumbs)}
 
+<br /><br />
 
   <form:form commandName="newGame" method="POST">
     Name: <form:input path="name"/><br />

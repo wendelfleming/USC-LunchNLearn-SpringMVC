@@ -24,6 +24,7 @@
 
   ${usc:breadcrumbbody(x, bCrumbs)}
 
+  <br /><br />
 
   <table>
     <tr>
@@ -32,15 +33,15 @@
     </tr>
     <tr>
       <td>Studio:</td>
-      <td><a href="<%=request.getContextPath()%>/spring/search/studio?searchTerm=${game.studio.name}&x=${x}">${game.studio.name}</a></td>
+      <td><a href="<%=request.getContextPath()%>/spring/search/studio?searchTerm=${usc:encodeUrl(game.studio.name)}&x=${x}">${game.studio.name}</a></td>
     </tr>
     <tr>
       <td>Genre:</td>
-      <td><a href="<%=request.getContextPath()%>/spring/search/genre?searchTerm=${game.genre.name}&x=${x}">${game.genre.name}</a></td>
+      <td><a href="<%=request.getContextPath()%>/spring/search/genre?searchTerm=${usc:encodeUrl(game.genre.name)}&x=${x}">${game.genre.name}</a></td>
     </tr>
     <tr>
       <td>Platform:</td>
-      <td><a href="<%=request.getContextPath()%>/spring/search/platform?searchTerm=${game.platform.name}&x=${x}">${game.platform.name}</a></td>
+      <td><a href="<%=request.getContextPath()%>/spring/search/platform?searchTerm=${usc:encodeUrl(game.platform.name)}&x=${x}">${game.platform.name}</a></td>
     </tr>
   </table>
 

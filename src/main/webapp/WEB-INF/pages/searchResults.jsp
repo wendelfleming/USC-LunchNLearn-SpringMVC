@@ -36,7 +36,7 @@ ${usc:breadcrumbbody(x, bCrumbs)}
   <c:forEach items="${searchresult}" var="game">
     <tr>
       <td><a href="<%=request.getContextPath()%>/spring/gameinfo/${game.id}/?x=${x}">${game.name}</a></td>
-      <td><a href="<%=request.getContextPath()%>/spring/search/studio?searchTerm=${game.studio.name}&x=${x}">${game.studio.name}</a></td>
+      <td><a href="<%=request.getContextPath()%>/spring/search/studio?searchTerm=${usc:encodeUrl(game.studio.name)}&x=${x}">${game.studio.name}</a></td>
     </tr>
   </c:forEach>
     </tbody>
