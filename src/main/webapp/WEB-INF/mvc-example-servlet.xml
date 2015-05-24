@@ -45,7 +45,7 @@
                 <property name="uriDisplayTextMapping">
                     <map>
                         <!-- The key is from the RequestMapping on the controllers -->
-                        <entry key="index" value="Home"/>
+                        <entry key="index" value="Index"/>
                         <entry key="db/genre" value="Genre DAO"/>
                         <entry key="db/platform" value="Platform DAO"/>
                         <entry key="db/studio" value="Studio DAO"/>

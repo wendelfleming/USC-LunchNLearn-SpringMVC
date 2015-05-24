@@ -81,7 +81,7 @@
 	overflow: hidden;
 	float: left;
 }
-.breadCrumb ul li.first a
+.breadCrumb ul li:first-child a
 {
 	height: 16px !important;
 	text-indent:-1000em;
@@ -89,13 +89,13 @@
 	padding: 0;
 	margin-top: 2px;
 	overflow: hidden;
-	background:url(../../images/jbreadcrumb/IconHome.gif) no-repeat 0 0;
+	background:url(../../images/jbreadcrumb/IconHome.gif) no-repeat 100% 0;
 }
-.breadCrumb ul li.first a:hover
+.breadCrumb ul li:first-child a:hover
 {
 	background-position: 0 -16px;
 }
-.breadCrumb ul li.last
+.breadCrumb ul li:last-child
 {
 	background: none;
 	margin-right: 0;

@@ -25,7 +25,7 @@ ${usc:breadcrumbbody(x, bCrumbs)}
 <h3>Search</h3>
 
 <%--<form action="<c:url value="/spring/search"/>" method="post">--%>
-<form action="<%=request.getContextPath()%>/spring/search?x=${x}" method="post">
+<form action="<%=request.getContextPath()%>/spring/search?x=${x}" method="get">
     Search: <input type="text" name="searchTerm"/><br />
     <input type="submit" value="Search"/>
 </form>
