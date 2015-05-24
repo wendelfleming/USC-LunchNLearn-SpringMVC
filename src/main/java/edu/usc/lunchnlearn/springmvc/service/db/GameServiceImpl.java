@@ -38,7 +38,7 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public List<Game> search(String param) {
-        return gameRepository.findByNameOrGenre_NameOrStudio_NameOrPlatform_Name(param, param, param, param);
+        return gameRepository.findByNameContainingOrGenre_NameContainingOrStudio_NameContainingOrPlatform_NameContaining(param, param, param, param);
     }
 
     @Override
