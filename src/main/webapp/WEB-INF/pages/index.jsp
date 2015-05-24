@@ -10,7 +10,7 @@
 
 <body>
 
-Welcome: ${message} <br />
+<h1>${message}</h1>
 
 <h3>Search</h3>
 

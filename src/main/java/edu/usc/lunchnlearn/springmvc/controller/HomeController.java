@@ -15,7 +15,7 @@ public class HomeController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String printIndex(ModelMap modelMap) {
-        modelMap.addAttribute("message", "Hello World");
+        modelMap.addAttribute("message", "Welcome to Lunch-n-Learn");
         return "index";
     }
 
