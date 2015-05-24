@@ -13,15 +13,20 @@
     <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
     ${usc:breadcrumbhead(jsPath,cssPath)}
 
+    <style type='text/css' media='screen'>@import "${contextPath}/css/lunchnlearn.css";</style>
+
 </head>
 
 <body>
+
+<div id="main_section">
+
 
 <h1>${message}</h1>
 
 ${usc:breadcrumbbody(x, bCrumbs)}
 
-
+<div id="content_section">
 <h3>Search</h3>
 
 <%--<form action="<c:url value="/spring/search"/>" method="post">--%>
@@ -43,8 +48,8 @@ ${usc:breadcrumbbody(x, bCrumbs)}
 <a href="<%=request.getContextPath()%>/spring/db/platform/?x=${x}">Platform</a><br />
 <a href="<%=request.getContextPath()%>/spring/db/studio/?x=${x}">Studio</a><br />
 <a href="<%=request.getContextPath()%>/spring/db/game/?x=${x}">Game</a><br />
-
-
+</div>
+</div>
 
 </body>
 

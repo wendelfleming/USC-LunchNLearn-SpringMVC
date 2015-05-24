@@ -24,16 +24,23 @@
   <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
   ${usc:breadcrumbhead(jsPath,cssPath)}
 
+  <style type='text/css' media='screen'>@import "${contextPath}/css/lunchnlearn.css";</style>
+
 
 </head>
 <body>
+
+<div id="main_section">
+
 
 <h1>${pageName}</h1>
 
 
 ${usc:breadcrumbbody(x, bCrumbs)}
 
-<br /><br />
+  <div id="content_section">
+
+  <br /><br />
 
 <div id="dynamicForms">
   <form class="addForm">
@@ -70,6 +77,8 @@ ${usc:breadcrumbbody(x, bCrumbs)}
     </tbody>
   </table>
 </div>
+</div>
+  </div>
 
 </body>
 </html>

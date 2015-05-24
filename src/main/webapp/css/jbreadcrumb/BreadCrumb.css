@@ -35,7 +35,8 @@
 	height: 21px;
 	overflow: hidden;
 	/*width: 990px;*/
-	width: 100%;
+	/*width: 100%;*/
+	width: 980px;
 	padding:5px;
 	border:solid 1px #dedede;
 	background:#fff;

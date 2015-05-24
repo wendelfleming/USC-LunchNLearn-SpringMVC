@@ -15,15 +15,26 @@
   <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
   ${usc:breadcrumbhead(jsPath,cssPath)}
 
+  <style type='text/css' media='screen'>@import "${contextPath}/css/lunchnlearn.css";</style>
+
 </head>
 <body>
 
-Search Results for ${searchterm}: <br />
+<div id="main_section">
+
+  <h3>Search Results</h3>
+
+
+
 
 ${usc:breadcrumbbody(x, bCrumbs)}
 
+  <div id="content_section">
 
-<c:if test="${!empty searchresult}">
+    Results for ${searchterm}: <br />
+
+
+  <c:if test="${!empty searchresult}">
   <table>
     <thead>
     <tr>
@@ -46,6 +57,10 @@ ${usc:breadcrumbbody(x, bCrumbs)}
 <c:if test="${empty searchresult}">
   No results found.
 </c:if>
+
+
+    </div>
+  </div>
 
 
 </body>

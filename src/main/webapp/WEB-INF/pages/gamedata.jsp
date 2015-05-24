@@ -15,15 +15,22 @@
   <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
   ${usc:breadcrumbhead(jsPath,cssPath)}
 
+  <style type='text/css' media='screen'>@import "${contextPath}/css/lunchnlearn.css";</style>
+
 
 </head>
 <body>
+
+<div id="main_section">
+
 
 <h1>Game</h1>
 
 ${usc:breadcrumbbody(x, bCrumbs)}
 
-<br /><br />
+  <div id="content_section">
+
+  <br /><br />
 
   <form:form commandName="newGame" method="POST">
     Name: <form:input path="name"/><br />
@@ -61,7 +68,8 @@ ${usc:breadcrumbbody(x, bCrumbs)}
     </c:if>
     </tbody>
   </table>
-
+</div>
+  </div>
 </body>
 </html>
 
