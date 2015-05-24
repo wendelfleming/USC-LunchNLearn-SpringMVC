@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="TRACE">
+    <Properties>
+        <Property name="log-path">/usr/local/springmvc/logs</Property>
+    </Properties>
+    <Appenders>
+        <Console name="console-log" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+        </Console>
+        <RollingFile name="file-log" fileName="${log-path}/myGroups.log"
+                     filePattern="${log-path}/springmvc-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="error-log" fileName="${log-path}/myGroups-error.log"
+                     filePattern="${log-path}/springmvc-error-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="addition-log" fileName="${log-path}/myGroups-additions.log"
+                     filePattern="${log-path}/springmvc-additions-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="audit" level="debug" additivity="false">
+            <appender-ref ref="addition-log" level="info"/>
+            <appender-ref ref="error-log" level="error"/>
+            <appender-ref ref="console-log" level="info"/>
+        </Logger>
+        <Logger name="edu.usc.middleware.mygroups" level="debug" additivity="false">
+            <appender-ref ref="file-log" level="info"/>
+            <appender-ref ref="error-log" level="error"/>
+            <appender-ref ref="console-log" level="info"/>
+        </Logger>
+        <Root level="info" additivity="false">
+            <AppenderRef ref="console-log"/>
+        </Root>
+    </Loggers>
+</Configuration>
