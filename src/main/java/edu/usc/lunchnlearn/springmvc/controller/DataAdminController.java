@@ -31,46 +31,46 @@ public class DataAdminController {
     @Autowired
     private StudioService studioService;
 
-    @RequestMapping(value = "/db/{tablename:genre|platform|studio}/admin/list", method = RequestMethod.GET, headers="Accept=application/json")
-    public List listData(@PathVariable("tablename")String tableName) {
+    @RequestMapping(value = "/db/{tablename:genre|platform|studio}/admin/list", method = RequestMethod.GET, headers = "Accept=application/json")
+    public List listData(@PathVariable("tablename") String tableName) {
         switch (tableName) {
-            case ("genre"): return genreService.findAllByName();
-            case ("platform"): return platformService.findAllByName();
-            default: return studioService.findAllByName();
+            case ("genre"):
+                return genreService.findAllByName();
+            case ("platform"):
+                return platformService.findAllByName();
+            default:
+                return studioService.findAllByName();
         }
     }
 
 
-    @RequestMapping(value = "/db/{tablename:genre|platform|studio}/admin/delete/{dataId}", method = RequestMethod.DELETE, headers="Accept=application/json")
-    public Map<String, String> deleteData(@PathVariable("tablename")String tableName, @PathVariable("dataId") Long dataId) {
+    @RequestMapping(value = "/db/{tablename:genre|platform|studio}/admin/delete/{dataId}", method = RequestMethod.DELETE, headers = "Accept=application/json")
+    public Map<String, String> deleteData(@PathVariable("tablename") String tableName, @PathVariable("dataId") Long dataId) {
         Map<String, String> returnMap = new HashMap<String, String>();
         switch (tableName) {
             case ("genre"):
                 genreService.delete(genreService.findOne(dataId));
-                if(genreService.findOne(dataId) == null) {
+                if (genreService.findOne(dataId) == null) {
                     returnMap.put("status", "deleted");
-                }
-                else {
+                } else {
                     returnMap.put("status", "error");
                     returnMap.put("message", "Genre was not deleted.");
                 }
                 break;
             case ("platform"):
                 platformService.delete(platformService.findOne(dataId));
-                if(platformService.findOne(dataId) == null) {
+                if (platformService.findOne(dataId) == null) {
                     returnMap.put("status", "deleted");
-                }
-                else {
+                } else {
                     returnMap.put("status", "error");
                     returnMap.put("message", "Platform was not deleted.");
                 }
                 break;
             default:
                 studioService.delete(studioService.findOne(dataId));
-                if(studioService.findOne(dataId) == null) {
+                if (studioService.findOne(dataId) == null) {
                     returnMap.put("status", "deleted");
-                }
-                else {
+                } else {
                     returnMap.put("status", "error");
                     returnMap.put("message", "Studio was not deleted.");
                 }
@@ -81,9 +81,8 @@ public class DataAdminController {
     }
 
 
-
-    @RequestMapping(value = "/db/{tablename:genre|platform|studio}/admin/add", method = RequestMethod.PUT, headers="Accept=application/json")
-    public Map addData(@PathVariable("tablename")String tableName,String name) {
+    @RequestMapping(value = "/db/{tablename:genre|platform|studio}/admin/add", method = RequestMethod.PUT, headers = "Accept=application/json")
+    public Map addData(@PathVariable("tablename") String tableName, String name) {
         Map returnMap = new HashMap();
 
         switch (tableName) {
@@ -91,11 +90,10 @@ public class DataAdminController {
                 Genre genre = new Genre();
                 genre.setName(name);
                 genreService.save(genre);
-                if(genreService.findOne(genre.getId()) != null) {
+                if (genreService.findOne(genre.getId()) != null) {
                     returnMap.put("status", "added");
                     returnMap.put("data", genre);
-                }
-                else {
+                } else {
                     returnMap.put("status", "error");
                     returnMap.put("data", genre);
                 }
@@ -104,11 +102,10 @@ public class DataAdminController {
                 Platform platform = new Platform();
                 platform.setName(name);
                 platformService.save(platform);
-                if(platformService.findOne(platform.getId()) != null) {
+                if (platformService.findOne(platform.getId()) != null) {
                     returnMap.put("status", "added");
                     returnMap.put("data", platform);
-                }
-                else {
+                } else {
                     returnMap.put("status", "error");
                     returnMap.put("data", platform);
                 }
@@ -117,11 +114,10 @@ public class DataAdminController {
                 Studio studio = new Studio();
                 studio.setName(name);
                 studioService.save(studio);
-                if(studioService.findOne(studio.getId()) != null) {
+                if (studioService.findOne(studio.getId()) != null) {
                     returnMap.put("status", "added");
                     returnMap.put("data", studio);
-                }
-                else {
+                } else {
                     returnMap.put("status", "error");
                     returnMap.put("data", studio);
                 }

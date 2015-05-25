@@ -7,8 +7,8 @@
         <Console name="console-log" target="SYSTEM_OUT">
             <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
         </Console>
-        <RollingFile name="file-log" fileName="${log-path}/myGroups.log"
-                     filePattern="${log-path}/springmvc-%d{yyyy-MM-dd}.log">
+        <RollingFile name="file-log" fileName="${log-path}/lunchnlearn.log"
+                     filePattern="${log-path}/lunchnlearn-%d{yyyy-MM-dd}.log">
             <PatternLayout>
                 <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
             </PatternLayout>
@@ -16,8 +16,8 @@
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
             </Policies>
         </RollingFile>
-        <RollingFile name="error-log" fileName="${log-path}/myGroups-error.log"
-                     filePattern="${log-path}/springmvc-error-%d{yyyy-MM-dd}.log">
+        <RollingFile name="error-log" fileName="${log-path}/lunchnlearn-error.log"
+                     filePattern="${log-path}/lunchnlearn-error-%d{yyyy-MM-dd}.log">
             <PatternLayout>
                 <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
             </PatternLayout>
@@ -25,8 +25,8 @@
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
             </Policies>
         </RollingFile>
-        <RollingFile name="addition-log" fileName="${log-path}/myGroups-additions.log"
-                     filePattern="${log-path}/springmvc-additions-%d{yyyy-MM-dd}.log">
+        <RollingFile name="addition-log" fileName="${log-path}/lunchnlearn-additions.log"
+                     filePattern="${log-path}/lunchnlearn-additions-%d{yyyy-MM-dd}.log">
             <PatternLayout>
                 <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
             </PatternLayout>
@@ -41,7 +41,7 @@
             <appender-ref ref="error-log" level="error"/>
             <appender-ref ref="console-log" level="info"/>
         </Logger>
-        <Logger name="edu.usc.middleware.mygroups" level="debug" additivity="false">
+        <Logger name="edu.usc.lunchnlearn.springmvc" level="debug" additivity="false">
             <appender-ref ref="file-log" level="info"/>
             <appender-ref ref="error-log" level="error"/>
             <appender-ref ref="console-log" level="info"/>

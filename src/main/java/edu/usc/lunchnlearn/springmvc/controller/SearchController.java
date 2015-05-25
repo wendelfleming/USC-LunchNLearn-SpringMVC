@@ -20,7 +20,7 @@ public class SearchController {
     @Autowired
     private GameService gameService;
 
-    @RequestMapping(value="/search")
+    @RequestMapping(value = "/search")
     public String search(String searchTerm, ModelMap modelMap) {
         modelMap.addAttribute("searchresult", gameService.search(searchTerm));
         modelMap.addAttribute("searchterm", searchTerm);
@@ -28,14 +28,14 @@ public class SearchController {
     }
 
 
-    @RequestMapping(value="/search/{tablename:genre|platform|studio}")
+    @RequestMapping(value = "/search/{tablename:genre|platform|studio}")
     public String searchByTable(@PathVariable("tablename") String tableName, String searchTerm, ModelMap modelMap) {
         modelMap.addAttribute("searchterm", tableName + "=" + searchTerm);
         switch (tableName) {
-            case("genre"):
+            case ("genre"):
                 modelMap.addAttribute("searchresult", gameService.searchByGenre(searchTerm));
                 break;
-            case("platform"):
+            case ("platform"):
                 modelMap.addAttribute("searchresult", gameService.searchByPlatform(searchTerm));
                 break;
             default:

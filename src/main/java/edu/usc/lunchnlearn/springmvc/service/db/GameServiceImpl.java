@@ -63,7 +63,6 @@ public class GameServiceImpl implements GameService {
     }
 
 
-
     public void setGameRepository(GameRepository gameRepository) {
         this.gameRepository = gameRepository;
     }

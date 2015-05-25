@@ -13,8 +13,6 @@
 
     <import resource="test-jpa-application-context.xml" />
 
-    <!--<import resource="classpath:jpa-application-context.xml"/>-->
-
 </beans>
 
 

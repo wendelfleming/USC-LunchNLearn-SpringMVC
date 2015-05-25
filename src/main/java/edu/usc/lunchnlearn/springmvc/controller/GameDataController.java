@@ -42,7 +42,7 @@ public class GameDataController {
     private GameService gameService;
 
 
-    @RequestMapping(value="/db/game/", method = RequestMethod.GET)
+    @RequestMapping(value = "/db/game/", method = RequestMethod.GET)
     public String gameList(ModelMap modelMap) {
         Game game = new Game();
         modelMap.put("newGame", game);
@@ -51,8 +51,8 @@ public class GameDataController {
         return "gamedata";
     }
 
-    @RequestMapping(value="/db/game/", method = RequestMethod.POST)
-    public String newGame(@ModelAttribute("newGame") Game game,  ModelMap modelMap) {
+    @RequestMapping(value = "/db/game/", method = RequestMethod.POST)
+    public String newGame(@ModelAttribute("newGame") Game game, ModelMap modelMap) {
         loadModel(modelMap);
 
         gameService.save(game);
@@ -64,8 +64,8 @@ public class GameDataController {
     }
 
 
-    @RequestMapping(value="/db/game/delete", method = RequestMethod.POST)
-    public String deleteGame(Long gameId,  ModelMap modelMap) {
+    @RequestMapping(value = "/db/game/delete", method = RequestMethod.POST)
+    public String deleteGame(Long gameId, ModelMap modelMap) {
         loadModel(modelMap);
 
         gameService.delete(gameService.findOne(gameId));
@@ -90,19 +90,19 @@ public class GameDataController {
         binder.registerCustomEditor(Genre.class, "genre", new PropertyEditorSupport() {
             @Override
             public void setAsText(String text) {
-                setValue((text.equals(""))?null:genreService.findOne(Long.parseLong((String)text)));
+                setValue((text.equals("")) ? null : genreService.findOne(Long.parseLong((String) text)));
             }
         });
         binder.registerCustomEditor(Platform.class, "platform", new PropertyEditorSupport() {
             @Override
             public void setAsText(String text) {
-                setValue((text.equals(""))?null:platformService.findOne(Long.parseLong((String) text)));
+                setValue((text.equals("")) ? null : platformService.findOne(Long.parseLong((String) text)));
             }
         });
         binder.registerCustomEditor(Studio.class, "studio", new PropertyEditorSupport() {
             @Override
             public void setAsText(String text) {
-                setValue((text.equals(""))?null:studioService.findOne(Long.parseLong((String)text)));
+                setValue((text.equals("")) ? null : studioService.findOne(Long.parseLong((String) text)));
             }
         });
     }

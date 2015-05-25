@@ -20,7 +20,7 @@ public class GameInfoController {
     private GameService gameService;
 
 
-    @RequestMapping(value="/gameinfo/{id}/")
+    @RequestMapping(value = "/gameinfo/{id}/")
     public String getGameInfo(@PathVariable("id") Long id, ModelMap modelMap) {
         Game game = gameService.findOne(id);
 
