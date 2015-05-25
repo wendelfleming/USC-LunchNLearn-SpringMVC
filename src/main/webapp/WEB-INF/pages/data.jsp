@@ -10,22 +10,22 @@
 <head>
   <title></title>
 
-  <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="<%=request.getContextPath()%>/js/LunchnLearn.js"></script>
-
-  <script type="text/javascript">
-    <!--
-    var page_ajaxmapping = "<%=request.getContextPath()%>/spring/db/${pathName}/admin";
-    //-->
-  </script>
-
   <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+  <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="${contextPath}/js/LunchnLearn.js"></script>
+
   <c:set var="jsPath" value="${contextPath}/js/jbreadcrumb/"/>
   <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
   ${usc:breadcrumbhead(jsPath,cssPath)}
 
   <style type='text/css' media='screen'>@import "${contextPath}/css/lunchnlearn.css";</style>
 
+  <script type="text/javascript">
+    <!--
+    var page_ajaxmapping = "${contextPath}/spring/db/${pathName}/admin";
+    //-->
+  </script>
 
 </head>
 <body>

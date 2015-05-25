@@ -9,6 +9,10 @@
     <title>Spring MVC Application</title>
 
     <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="${contextPath}/js/jquery/swfobject.js"></script>
+
     <c:set var="jsPath" value="${contextPath}/js/jbreadcrumb/"/>
     <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
     ${usc:breadcrumbhead(jsPath,cssPath)}
@@ -30,7 +34,7 @@ ${usc:breadcrumbbody(x, bCrumbs)}
 <h3>Search</h3>
 
 <%--<form action="<c:url value="/spring/search"/>" method="post">--%>
-<form action="<%=request.getContextPath()%>/spring/search?x=${x}" method="get">
+<form action="${contextPath}/spring/search?x=${x}" method="get">
     Search: <input type="text" name="searchTerm"/><br />
     <input type="submit" value="Search"/>
 </form>
@@ -44,10 +48,10 @@ ${usc:breadcrumbbody(x, bCrumbs)}
 <%--<a href="<c:url value="/spring/db/studio/"/>">Studio</a><br />--%>
 <%--<a href="<c:url value="/spring/db/game/"/>">Game</a><br />--%>
 
-<a href="<%=request.getContextPath()%>/spring/db/genre/?x=${x}">Genre</a><br />
-<a href="<%=request.getContextPath()%>/spring/db/platform/?x=${x}">Platform</a><br />
-<a href="<%=request.getContextPath()%>/spring/db/studio/?x=${x}">Studio</a><br />
-<a href="<%=request.getContextPath()%>/spring/db/game/?x=${x}">Game</a><br />
+<a href="${contextPath}/spring/db/genre/?x=${x}">Genre</a><br />
+<a href="${contextPath}/spring/db/platform/?x=${x}">Platform</a><br />
+<a href="${contextPath}/spring/db/studio/?x=${x}">Studio</a><br />
+<a href="${contextPath}/spring/db/game/?x=${x}">Game</a><br />
 </div>
 </div>
 

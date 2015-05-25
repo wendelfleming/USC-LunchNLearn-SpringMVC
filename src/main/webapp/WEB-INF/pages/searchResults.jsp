@@ -11,6 +11,10 @@
   <title>Spring MVC LunchNLearn - Search</title>
 
   <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+  <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="${contextPath}/js/jquery/swfobject.js"></script>
+
   <c:set var="jsPath" value="${contextPath}/js/jbreadcrumb/"/>
   <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
   ${usc:breadcrumbhead(jsPath,cssPath)}
@@ -46,8 +50,8 @@ ${usc:breadcrumbbody(x, bCrumbs)}
     <tbody>
   <c:forEach items="${searchresult}" var="game">
     <tr>
-      <td><a href="<%=request.getContextPath()%>/spring/gameinfo/${game.id}/?x=${x}">${game.name}</a></td>
-      <td><a href="<%=request.getContextPath()%>/spring/search/studio?searchTerm=${usc:encodeUrl(game.studio.name)}&x=${x}">${game.studio.name}</a></td>
+      <td><a href="${contextPath}/spring/gameinfo/${game.id}/?x=${x}">${game.name}</a></td>
+      <td><a href="${contextPath}/spring/search/studio?searchTerm=${usc:encodeUrl(game.studio.name)}&x=${x}">${game.studio.name}</a></td>
     </tr>
   </c:forEach>
     </tbody>

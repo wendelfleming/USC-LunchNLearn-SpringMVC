@@ -11,6 +11,10 @@
   <title></title>
 
   <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+  <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="${contextPath}/js/jquery/swfobject.js"></script>
+
   <c:set var="jsPath" value="${contextPath}/js/jbreadcrumb/"/>
   <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
   ${usc:breadcrumbhead(jsPath,cssPath)}
@@ -61,7 +65,7 @@ ${usc:breadcrumbbody(x, bCrumbs)}
           <td>${game.platform}</td>
           <td>${game.studio}</td>
           <td>
-            <form method="post" action="<%=request.getContextPath()%>/spring/db/game/delete?x=${x}"><input type="hidden" name="gameId" value="${game.id}"/><input type="submit" value="Delete"/></form>
+            <form method="post" action="${contextPath}/spring/db/game/delete?x=${x}"><input type="hidden" name="gameId" value="${game.id}"/><input type="submit" value="Delete"/></form>
           </td>
         </tr>
       </c:forEach>

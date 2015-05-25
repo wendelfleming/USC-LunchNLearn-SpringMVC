@@ -11,8 +11,15 @@
   <title></title>
 
   <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+  <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="${contextPath}/js/jquery/swfobject.js"></script>
+
   <c:set var="jsPath" value="${contextPath}/js/jbreadcrumb/"/>
   <c:set var="cssPath" value="${contextPath}/css/jbreadcrumb/"/>
+
+
+
   ${usc:breadcrumbhead(jsPath,cssPath)}
 
   <style type='text/css' media='screen'>@import "${contextPath}/css/lunchnlearn.css";</style>
@@ -40,15 +47,15 @@
     </tr>
     <tr>
       <td>Studio:</td>
-      <td><a href="<%=request.getContextPath()%>/spring/search/studio?searchTerm=${usc:encodeUrl(game.studio.name)}&x=${x}">${game.studio.name}</a></td>
+      <td><a href="${contextPath}/spring/search/studio?searchTerm=${usc:encodeUrl(game.studio.name)}&x=${x}">${game.studio.name}</a></td>
     </tr>
     <tr>
       <td>Genre:</td>
-      <td><a href="<%=request.getContextPath()%>/spring/search/genre?searchTerm=${usc:encodeUrl(game.genre.name)}&x=${x}">${game.genre.name}</a></td>
+      <td><a href="${contextPath}/spring/search/genre?searchTerm=${usc:encodeUrl(game.genre.name)}&x=${x}">${game.genre.name}</a></td>
     </tr>
     <tr>
       <td>Platform:</td>
-      <td><a href="<%=request.getContextPath()%>/spring/search/platform?searchTerm=${usc:encodeUrl(game.platform.name)}&x=${x}">${game.platform.name}</a></td>
+      <td><a href="${contextPath}/spring/search/platform?searchTerm=${usc:encodeUrl(game.platform.name)}&x=${x}">${game.platform.name}</a></td>
     </tr>
   </table>
     </div>
