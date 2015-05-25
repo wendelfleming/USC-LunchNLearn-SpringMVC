@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:repository="http://www.springframework.org/schema/data/repository"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="
+       	   http://www.springframework.org/schema/mvc
+       	   http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx.xsd
+           http://www.springframework.org/schema/data/jpa
+           http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+           http://www.springframework.org/schema/data/repository
+           http://www.springframework.org/schema/data/repository/spring-repository.xsd
+           http://www.springframework.org/schema/mvc
+           http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+
+    <context:component-scan base-package="edu.usc.lunchnlearn"/>
+
+    <mvc:annotation-driven/>
+
+    <!-- Configuring interceptors based on URI -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="edu.usc.lunchnlearn.springmvc.interceptor.BreadCrumbInterceptor">
+                <property name="uriExclusionList">
+                    <util:list value-type="java.lang.String">
+                        <value>db/game/delete</value>
+                    </util:list>
+                </property>
+                <property name="uriDisplayTextMapping">
+                    <map>
+                        <!-- The key is from the RequestMapping on the controllers -->
+                        <entry key="index" value="Index"/>
+                        <entry key="db/genre" value="Genre DAO"/>
+                        <entry key="db/platform" value="Platform DAO"/>
+                        <entry key="db/studio" value="Studio DAO"/>
+                        <entry key="db/game" value="Game DAO"/>
+                        <entry key="gameinfo" value="Game Info"/>
+                        <entry key="search" value="Search"/>
+                    </map>
+                </property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
+
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+
+
+
+    <!--&lt;!&ndash; Hibernate-JPA settings &ndash;&gt;-->
+    <!--<jpa:repositories base-package="edu.usc.lunchnlearn.springmvc.dao"/>-->
+
+    <!--<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">-->
+        <!--<property name="persistenceUnitName" value="defaultPersistenceUnit"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">-->
+        <!--<property name="entityManagerFactory" ref="entityManagerFactory" />-->
+    <!--</bean>-->
+
+    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+
+
+
+
+    <!--<repository:jackson2-populator id="jackson2-populator" locations="classpath:data.json" />-->
+
+
+</beans>
+
+

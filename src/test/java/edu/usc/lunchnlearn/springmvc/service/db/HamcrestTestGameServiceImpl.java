@@ -16,11 +16,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
-import static org.hamcrest.Matchers.notNullValue;
 
 import java.util.List;
 

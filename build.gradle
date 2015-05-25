@@ -23,6 +23,10 @@ ext {
     commonsLangVersion = "3.3.2"
 }
 
+//configurations {
+//    provided
+//}
+
 repositories {
     mavenLocal()
     mavenCentral()
@@ -79,10 +83,27 @@ dependencies {
     }
 //    testCompile group: 'junit', name: 'junit', version: '4.11'
 
-    //include in compile only, exclude in the war
-    providedCompile 'javax.servlet:servlet-api:2.5'
+    //include in compile only, exclude in the war - needed for testing though
+    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+//    runtime 'javax.servlet:servlet-api:2.5'
 
 }
+
+//sourceSets {
+//    main {
+//        compileClasspath += configurations.provided
+//    }
+//    test {
+//        compileClasspath += configurations.provided
+//        runtimeClasspath += configurations.provided
+//    }
+//}
+
+//idea {
+//    module {
+//        scopes.PROVIDED.plus += configurations.provided
+//    }
+//}
 
 
 war.archiveName "lunchnlearn.war"
