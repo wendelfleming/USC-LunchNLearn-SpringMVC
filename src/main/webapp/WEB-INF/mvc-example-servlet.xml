@@ -6,6 +6,7 @@
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:repository="http://www.springframework.org/schema/data/repository"
        xmlns:jpa="http://www.springframework.org/schema/data/jpa"
        xsi:schemaLocation="
        	   http://www.springframework.org/schema/mvc
@@ -22,6 +23,8 @@
            http://www.springframework.org/schema/tx/spring-tx.xsd
            http://www.springframework.org/schema/data/jpa
            http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+           http://www.springframework.org/schema/data/repository
+           http://www.springframework.org/schema/data/repository/spring-repository.xsd
            http://www.springframework.org/schema/mvc
            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
@@ -31,6 +34,7 @@
     <mvc:annotation-driven/>
 
     <import resource="config/web-application-context.xml" />
+    <import resource="config/jpa-application-context.xml" />
 
     <!-- Configuring interceptors based on URI -->
     <mvc:interceptors>
@@ -70,18 +74,24 @@
 
 
 
-    <!-- Hibernate-JPA settings -->
-    <jpa:repositories base-package="edu.usc.lunchnlearn.springmvc.dao"/>
+    <!--&lt;!&ndash; Hibernate-JPA settings &ndash;&gt;-->
+    <!--<jpa:repositories base-package="edu.usc.lunchnlearn.springmvc.dao"/>-->
 
-    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
-        <property name="persistenceUnitName" value="defaultPersistenceUnit"/>
-    </bean>
+    <!--<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">-->
+        <!--<property name="persistenceUnitName" value="defaultPersistenceUnit"/>-->
+    <!--</bean>-->
 
-    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory" />
-    </bean>
+    <!--<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">-->
+        <!--<property name="entityManagerFactory" ref="entityManagerFactory" />-->
+    <!--</bean>-->
 
-    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+
+
+
+
+    <!--<repository:jackson2-populator id="jackson2-populator" locations="classpath:data.json" />-->
+
 
 </beans>
 

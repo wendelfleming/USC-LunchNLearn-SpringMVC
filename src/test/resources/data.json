@@ -1,0 +1,283 @@
+[
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 1,
+    "name" : "RPG"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 2,
+    "name" : "Shooter"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 3,
+    "name" : "MMORPG"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 4,
+    "name" : "Action"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 5,
+    "name" : "Puzzle"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 6,
+    "name" : "Sports"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 7,
+    "name" : "Fighting"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 8,
+    "name" : "Simulation"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 9,
+    "name" : "RTS"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 10,
+    "name" : "MOBA"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 11,
+    "name" : "Music"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 12,
+    "name" : "Strategy"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 13,
+    "name" : "Platformer"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 14,
+    "name" : "Castle Defense"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 15,
+    "name" : "Mobile"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre",
+    "id" : 16,
+    "name" : "Card"},
+
+
+
+
+
+
+
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 1,
+    "name" : "Playstation 4"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 2,
+    "name" : "XBox One"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 3,
+    "name" : "Nintendo Wii U"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 4,
+    "name" : "PC"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 5,
+    "name" : "Nintendo 3DS"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 6,
+    "name" : "Playstation Vita"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 7,
+    "name" : "Playstation 3"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 8,
+    "name" : "XBox 360"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 9,
+    "name" : "Nintendo Wii"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 10,
+    "name" : "Nintendo Gameboy"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 11,
+    "name" : "Playstation 2"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 12,
+    "name" : "XBox"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 13,
+    "name" : "Nintendo Gamecube"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 14,
+    "name" : "Apple iPhone"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform",
+    "id" : 15,
+    "name" : "Google Android"},
+
+
+
+
+
+
+
+
+
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 1,
+    "name" : "Blizzard"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 2,
+    "name" : "BioWare"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 3,
+    "name" : "Bungie"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 4,
+    "name" : "Valve"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 5,
+    "name" : "Bethesda"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 6,
+    "name" : "Riot"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 7,
+    "name" : "EA"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 8,
+    "name" : "Sony"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 9,
+    "name" : "Nintendo"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 10,
+    "name" : "Infinity Ward"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 11,
+    "name" : "ArenaNet"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 12,
+    "name" : "Square-Enix"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 13,
+    "name" : "Turbine"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 14,
+    "name" : "Runic Games"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 15,
+    "name" : "id Software"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 16,
+    "name" : "Gearbox"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 17,
+    "name" : "Rockstar"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 18,
+    "name" : "SuperCell"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 19,
+    "name" : "Zynga"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 20,
+    "name" : "Ubisoft"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 21,
+    "name" : "Toys For Bob"},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio",
+    "id" : 22,
+    "name" : "Disney Interactive"},
+
+
+
+
+
+
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Game",
+    "id" : 1,
+    "name" : "World of Warcraft",
+    "studio" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio", "id" : 1},
+    "platform" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform", "id" : 4},
+    "genre" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre", "id" : 3}},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Game",
+    "id" : 2,
+    "name" : "Diablo 3",
+    "studio" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio", "id" : 1},
+    "platform" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform", "id" : 4},
+    "genre" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre", "id" : 1}},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Game",
+    "id" : 3,
+    "name" : "Diablo 3",
+    "studio" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio", "id" : 1},
+    "platform" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform", "id" : 1},
+    "genre" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre", "id" : 1}},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Game",
+    "id" : 4,
+    "name" : "Diablo 3",
+    "studio" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio", "id" : 1},
+    "platform" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform", "id" : 2},
+    "genre" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre", "id" : 1}},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Game",
+    "id" : 5,
+    "name" : "Diablo 2",
+    "studio" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio", "id" : 1},
+    "platform" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform", "id" : 4},
+    "genre" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre", "id" : 1}},
+
+  { "_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Game",
+    "id" : 6,
+    "name" : "Diablo",
+    "studio" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Studio", "id" : 1},
+    "platform" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Platform", "id" : 4},
+    "genre" : {"_class" : "edu.usc.lunchnlearn.springmvc.dao.bean.Genre", "id" : 1}}
+
+
+]
+
+
+
+
