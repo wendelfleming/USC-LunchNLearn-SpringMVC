@@ -7,10 +7,10 @@ but there are a lot of easter eggs in here.  So lets begin.
 The project format is using Gradle.  If you don't have Gradle installed, that is OK.  It is boot strapped with
 a Gradle wrapper.  To start you can execute the following gradle commands:
 
-gradlew tasks - show a list of Gradle tasks that can be executed.
-gradlew build - build the project
-gradlew test - run the unit tests
-gradlew jettyRunWar - starts Jetty - http://localhost:8080/lunchnlearn/spring/index.html
+- gradlew tasks - show a list of Gradle tasks that can be executed.
+- gradlew build - build the project
+- gradlew test - run the unit tests
+- gradlew jettyRunWar - starts Jetty - http://localhost:8080/lunchnlearn/spring/index.html
 
 If you want to use an IDE (Eclipse or IntelliJ), it can also help with that.
 
@@ -18,9 +18,9 @@ https://docs.gradle.org/current/userguide/eclipse_plugin.html
 
 To set up Eclipse, run the following commands:
 
-gradlew eclipse
-gradlew eclipse Java - NOTE: the capital J
-gradlew eclipse War
+- gradlew eclipse
+- gradlew eclipse Java - NOTE: the capital J
+- gradlew eclipse War
 
 Once this is done, you can use File -> Import... -> Existing Projects into Workspace to import the project
 into your workspace.
@@ -29,7 +29,7 @@ into your workspace.
 
 If you want to use IntelliJ, run the following command:
 
-gradlew idea
+- gradlew idea
 
 Or you can create a new IntelliJ project yourself by using the following instructions:
 
