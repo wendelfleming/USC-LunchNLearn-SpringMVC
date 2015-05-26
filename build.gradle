@@ -24,10 +24,6 @@ ext {
     commonsLangVersion = "3.3.2"
 }
 
-//configurations {
-//    provided
-//}
-
 repositories {
     mavenLocal()
     mavenCentral()
@@ -69,7 +65,6 @@ dependencies {
     compile "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
     compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
     compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
-//    compile "com.fasterxml.jackson.core:jackson-databind:2.5.3"
 
     // Commons Lang
     compile "org.apache.commons:commons-lang3:$commonsLangVersion"
@@ -86,25 +81,8 @@ dependencies {
 
     //include in compile only, exclude in the war - needed for testing though
     providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
-//    runtime 'javax.servlet:servlet-api:2.5'
 
 }
-
-//sourceSets {
-//    main {
-//        compileClasspath += configurations.provided
-//    }
-//    test {
-//        compileClasspath += configurations.provided
-//        runtimeClasspath += configurations.provided
-//    }
-//}
-
-//idea {
-//    module {
-//        scopes.PROVIDED.plus += configurations.provided
-//    }
-//}
 
 
 war.archiveName "lunchnlearn.war"
