@@ -54,9 +54,10 @@ Here is a list of Easter Eggs features.  Some of which will be covered during th
 others are free to be discovered on your own (marked with *).  Some I would like to get to if time
 is available (marked with +).
 
-- Automatic configuration by using <servlet_name>-servlet.xml for XML based Spring configuration
+- Automatic configuration by using &lt;servlet_name&rt;-servlet.xml for XML based Spring configuration
 - Spring MVC Annotation configuration for web controllers
 - Spring MVC form:form, c:url, and other JSP custom tags
+- Spring MVC custom form binding for foreign key ORM fields
 - Spring MVC EL tags
 - Custom EL tags
 - Spring MVC @RequestMapping and @PathVariable
