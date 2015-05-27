@@ -102,3 +102,12 @@ dependencies {
 
 war.archiveName "lunchnlearn.war"
 jettyRunWar.contextPath = 'lunchnlearn'
+
+jettyRunWar.stopPort = 8090
+jettyRunWar.stopKey = 'stopKey'
+
+jettyStop.stopPort = 8090
+jettyStop.stopKey = 'stopKey'
+
+jettyRun.stopPort = 8090
+jettyRun.stopKey = 'stopKey'
