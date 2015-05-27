@@ -49,7 +49,8 @@
         <h3>Search</h3>
 
         <%--<form action="<c:url value="/spring/search"/>" method="post">--%>
-        <form action="${contextPath}/spring/search?x=${x}" method="get">
+        <form action="${contextPath}/spring/search" method="get">
+            <input type="hidden" name="x" value="${x}"/>
             Search: <input type="text" name="searchTerm"/><br/>
             <input type="submit" value="Search"/>
         </form>
