@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 wendel fleming
+ * Copyright 2015 University of Southern California
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,9 @@ import java.util.Map;
 /**
  * AOP interceptor used to handle breadcrumbs.  This handles putting breadcrumbs on all of the pages.  It
  * separates this functionality from the controllers so that they do not even know there are breadcrumbs.
+ *
+ * @author wendel fleming
+ *
  */
 public class BreadCrumbInterceptor extends HandlerInterceptorAdapter {
 

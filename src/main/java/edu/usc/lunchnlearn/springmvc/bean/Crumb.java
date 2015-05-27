@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 wendel fleming
+ * Copyright 2015 University of Southern California
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,9 @@ package edu.usc.lunchnlearn.springmvc.bean;
  * Bean that holds breadcrumb information.  It also holds a link to the parent breadcrumb.  Breadcrumbs
  * only care about the parent ahead of it.  This allows a daisy chain where each crumb only knows what
  * came before it.
+ *
+ * @author wendel fleming
+ *
  */
 
 public class Crumb {

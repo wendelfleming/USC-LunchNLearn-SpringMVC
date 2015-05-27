@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 wendel fleming
+ * Copyright 2015 University of Southern California
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,9 @@ import java.util.Map;
 
 /**
  * EL Custom tag class that handles breadcrumbs.
+ *
+ * @author wendel fleming
+ *
  */
 public class Breadcrumbler {
 
