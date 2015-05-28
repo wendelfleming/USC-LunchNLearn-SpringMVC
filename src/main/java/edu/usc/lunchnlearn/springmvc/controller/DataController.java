@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class DataController {
+    private static final String DATA_PAGE = "data";
 
     @Autowired
     private GenreService genreService;
@@ -48,15 +49,15 @@ public class DataController {
             case("genre"):
                 modelMap.addAttribute("dataset", genreService.findAllByName());
                 modelMap.addAttribute("pageName", "Genre");
-                return "data";
+                return DATA_PAGE;
             case("platform"):
                 modelMap.addAttribute("dataset", platformService.findAllByName());
                 modelMap.addAttribute("pageName", "Platform");
-                return "data";
+                return DATA_PAGE;
             default:
                 modelMap.addAttribute("dataset", studioService.findAllByName());
                 modelMap.addAttribute("pageName", "Studio");
-                return "data";
+                return DATA_PAGE;
         }
     }
 

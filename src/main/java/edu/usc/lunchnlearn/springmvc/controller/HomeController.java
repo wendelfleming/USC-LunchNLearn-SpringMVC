@@ -27,11 +27,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
+    private static final String INDEX_PAGE = "index";
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public String printIndex(ModelMap modelMap) {
         modelMap.addAttribute("message", "Welcome to Lunch-n-Learn");
-        return "index";
+        return INDEX_PAGE;
     }
 
 }
