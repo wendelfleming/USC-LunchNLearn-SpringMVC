@@ -61,20 +61,17 @@ public class GameDataController {
     public String gameList(ModelMap modelMap) {
         Game game = new Game();
         modelMap.put("newGame", game);
+
         loadModel(modelMap);
-        modelMap.put("games", gameService.findAllByName());
         return "gamedata";
     }
 
     @RequestMapping(value = "/db/game/", method = RequestMethod.POST)
     public String newGame(@ModelAttribute("newGame") Game game, ModelMap modelMap) {
-        loadModel(modelMap);
-
         gameService.save(game);
         modelMap.put("newGame", new Game());
 
-        modelMap.put("games", gameService.findAllByName());
-
+        loadModel(modelMap);
         return "gamedata";
     }
 
@@ -97,6 +94,7 @@ public class GameDataController {
         modelMap.put("genres", genreService.findAllByName());
         modelMap.put("platforms", platformService.findAllByName());
         modelMap.put("studios", studioService.findAllByName());
+        modelMap.put("games", gameService.findAllByName());
     }
 
 

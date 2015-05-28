@@ -53,12 +53,15 @@
 
         <form:form commandName="newGame" method="POST">
             Name: <form:input path="name"/><br/>
-            Genre: <form:select path="genre"><form:options items="${genres}" itemValue="id"
-                                                           itemLabel="name"></form:options></form:select><br/>
-            Platform: <form:select path="platform"><form:options items="${platforms}" itemValue="id"
-                                                                 itemLabel="name"></form:options></form:select><br/>
-            Studio: <form:select path="studio"><form:options items="${studios}" itemValue="id"
-                                                             itemLabel="name"></form:options></form:select><br/>
+            Genre: <form:select path="genre">
+                        <form:options items="${genres}" itemValue="id" itemLabel="name"></form:options>
+                    </form:select><br/>
+            Platform: <form:select path="platform">
+                        <form:options items="${platforms}" itemValue="id" itemLabel="name"></form:options>
+                    </form:select><br/>
+            Studio: <form:select path="studio">
+                        <form:options items="${studios}" itemValue="id" itemLabel="name"></form:options>
+                    </form:select><br/>
             <input type="submit" value="Add Game"/>
         </form:form>
 
@@ -83,9 +86,11 @@
                         <td>${game.platform}</td>
                         <td>${game.studio}</td>
                         <td>
-                            <form method="post" action="${contextPath}/spring/db/game/delete?x=${x}"><input
-                                    type="hidden" name="gameId" value="${game.id}"/><input type="submit"
-                                                                                           value="Delete"/></form>
+                            <form method="post" action="${contextPath}/spring/db/game/delete">
+                                <input type="hidden" name="x" value="${x}"/>
+                                <input type="hidden" name="gameId" value="${game.id}"/>
+                                <input type="submit" value="Delete"/>
+                            </form>
                         </td>
                     </tr>
                 </c:forEach>
