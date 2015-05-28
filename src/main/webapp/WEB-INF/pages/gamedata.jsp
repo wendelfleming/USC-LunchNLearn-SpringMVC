@@ -52,6 +52,7 @@
         <br/><br/>
 
         <form:form commandName="newGame" method="POST">
+            <input type="hidden" name="x" value="${x}"/>
             Name: <form:input path="name"/><br/>
             Genre: <form:select path="genre">
                         <form:options items="${genres}" itemValue="id" itemLabel="name"></form:options>
