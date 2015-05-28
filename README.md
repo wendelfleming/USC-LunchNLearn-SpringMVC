@@ -5,7 +5,7 @@ This project is a Lunch-n-Learn for the University of Southern California.  The 
 but there are a lot of easter eggs in here.  So lets begin.
 
 The project format is using Gradle.  If you don't have Gradle installed, that is OK.  It is boot strapped with
-a Gradle wrapper.  To start you can execute the following gradle commands:
+a Gradle wrapper.  You will need to have the Java JDK 8 installed.  To start you can execute the following gradle commands:
 
 - gradlew tasks - show a list of Gradle tasks that can be executed.
 - gradlew build - build the project
