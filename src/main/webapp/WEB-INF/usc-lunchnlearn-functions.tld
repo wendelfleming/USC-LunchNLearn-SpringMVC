@@ -21,7 +21,7 @@
         version="2.0">
     <tlib-version>1.0</tlib-version>
     <short-name>usc-middleware-functions</short-name>
-    <uri>http://mygroups.usc.edu/functions</uri>
+    <uri>http://lunchnlearn.usc.edu/functions</uri>
     <function>
         <description>This tag is to URLEncode a string using UTF-8</description>
         <display-name>encodeUrl</display-name>
